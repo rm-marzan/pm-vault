@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Local Setup
+
+1. Clone the repository from GitHub - git clone https://github.com/rm-marzan/pm-vault.git
+2. Use the default branch master
+3. Check the BASE_URL in the .env file and ensure that it matches the URL of the backend API.
+4. Install Node.js (version 16.17.0) and run the command **npm install** (using npm version 8.19.2).
+5. Run the command **npm start** to start the React server.
+6. The project should now be accessible at http://localhost:4000/.
+7. To access the site, please register a new user and log in.
+
 ## Available Scripts
 
 In the project directory, you can run:
