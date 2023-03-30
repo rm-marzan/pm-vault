@@ -1,0 +1,32 @@
+.page-container {
+  width: 90%;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.side-menu-item {
+  &:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+}
+
+.folder-list {
+  span {
+    &:hover {
+      color: #007bff;
+      cursor: pointer;
+    }
+  }
+}
+
+.accordion-button:not(.collapsed) {
+  color: white;
+  background-color: #1e2a3c;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}

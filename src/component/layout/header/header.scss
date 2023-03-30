@@ -1,0 +1,52 @@
+.burger-menu {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 25px;
+  width: 40px;
+}
+
+.bg-color {
+  background-color: #1e2a3c;
+}
+
+.navbar-collapse {
+  justify-content: flex-start;
+}
+
+.navbar-nav {
+  margin-right: auto;
+}
+
+.navbar-nav > li {
+  margin-right: 20px;
+}
+.user-dropdown {
+  all: unset;
+  display: flex;
+  align-items: center;
+  .user-dropdown-btn {
+    color: #2d8ca6;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+}
+.user-dropdown::after {
+  display: none;
+}
+
+.user-dropdown-text {
+  display: flex;
+  background-color: #2d8ca6;
+  border-radius: 50%;
+  font-size: 10px;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.link-item {
+  color: white !important;
+}

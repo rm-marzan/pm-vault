@@ -1,0 +1,48 @@
+.user-info {
+  padding: 50px 0;
+
+  .plan-card {
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0;
+
+      .interval {
+        font-size: 12px;
+      }
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 20px;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .user-btn {
+      width: 80%;
+      margin: 0 auto;
+      background: #39afd1;
+      border: none;
+      &:hover {
+        background: #2d8ca6;
+      }
+    }
+  }
+}

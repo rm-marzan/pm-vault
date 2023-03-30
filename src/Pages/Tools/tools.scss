@@ -1,0 +1,20 @@
+.tools-page{
+    width: 90%;
+}
+
+.tools-items {
+    li {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+      &.active {
+        font-weight: bold;
+        background-color: #1e2a3c;
+      }
+    }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}

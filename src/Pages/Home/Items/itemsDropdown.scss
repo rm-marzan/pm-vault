@@ -1,0 +1,48 @@
+.three-dot-icon {
+  .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #534d4d;
+    margin-bottom: 2px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  all: unset;
+  padding: 0 8px;
+  cursor: pointer;
+}
+.three-dot-icon::after {
+  display: none;
+}
+.three-dot-dropdown {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    min-width: 120px;
+
+    .dropdown-item {
+      cursor: pointer;
+      padding: 8px 10px 0 10px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}

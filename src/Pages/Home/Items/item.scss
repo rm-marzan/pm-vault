@@ -1,0 +1,136 @@
+.item-page {
+  width: 90%;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.hover-btn {
+  background: #1e2a3c;
+  border: none;
+  &:hover {
+    background: #2d8ca6;
+  }
+}
+
+.item-listing {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+
+  .listing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #1e2a3c;
+    color: white;
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+    }
+
+    .options-header {
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  .listing-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    border-bottom: 1px solid #8080804d;
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+
+    .options-container {
+      .three-dots {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .dot {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: #ccc;
+          margin-right: 4px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.item-name {
+  p {
+    font-size: 16px;
+    font-weight: 520;
+    color: #000;
+
+    &:hover {
+      color: #007bff; // set the text color on hover
+      cursor: pointer;
+    }
+  }
+}
+
+.list-org-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: #2d8ca6;
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: inline;
+
+
+  &:hover {
+    color: white; // set the text color on hover
+    cursor: pointer;
+  }
+}
+
+.list-own-name {
+  font-size: 14px;
+  font-weight: 550;
+  color: #000;
+  background-color: #e7f1ff;
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: inline;
+
+
+  &:hover {
+    color: #2d8ca6; // set the text color on hover
+    cursor: pointer;
+  }
+}
