@@ -14,9 +14,6 @@ const AddOrgModal = ({  openAddModal, setOpenAddModal, setOrgData }) => {
         if(orgname.length === 0 || orgname > 50){
             toast.error("Invalid Input For Name");
         }
-        else if(!(Validation.nameRegex).test(orgname)){
-            toast.error("Invalid Name Format");
-        }
         else if(!(Validation.emailRegex).test(email)){
             toast.error("Invalid Email");
         }
