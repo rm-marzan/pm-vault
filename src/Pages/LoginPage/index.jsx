@@ -73,9 +73,6 @@ const LoginForm = () => {
     else if(regPassword.length===0 || regPassword.length < 5){
         toast.error("Password should be at least 5 character");
     }
-    else if(!(Validation.nameRegex).test(regName)){
-        toast.error("Invalid Name Format");
-    }
     else if(!(Validation.emailRegex).test(regEmail)){
         toast.error("Invalid Email");
     }
