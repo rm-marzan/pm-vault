@@ -21,8 +21,8 @@ const AddItemModal = ({ setItemsData, openPopup, setOpenPopup }) => {
         if(stateValues.itemName.length === 0 || stateValues.itemName.length > 50){
             toast.error("Invalid Name Format");
         }
-        else if(!(Validation.nameRegex).test(stateValues.itemName)){
-            toast.error("Invalid Name Format");
+        else if(stateValues.loginUsername && !(Validation.nameRegex).test(stateValues.loginUsername)){
+            toast.error("Invalid userame format");
         }
         else{
             let myForm = new FormData();
