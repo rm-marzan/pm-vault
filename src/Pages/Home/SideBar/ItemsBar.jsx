@@ -1,4 +1,4 @@
-const ItemsBar = ({ setSelectMenu }) => {
+const ItemsBar = ({ selectMenu, setSelectMenu }) => {
   const handleSelectMenu = (e, type) => {
     setSelectMenu({
       menuType: type,
@@ -15,12 +15,12 @@ const ItemsBar = ({ setSelectMenu }) => {
         <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
           <div className="accordion-body">
               <ul className="list-group list-group-flush">
-                  <li className="list-group-item side-menu-item" value='' onClick={(e) => handleSelectMenu(e, 'items')}><i className="bi bi-bricks"></i> All Items</li>
-                  <li className="list-group-item side-menu-item" value='' onClick={(e) => handleSelectMenu(e, 'favorite')}><i className="bi bi-star"></i> Favorites</li>
-                  <li className="list-group-item side-menu-item" value='1' onClick={(e) => handleSelectMenu(e, 'type')}><i className="bi bi-globe"></i> Login</li>
-                  <li className="list-group-item side-menu-item" value='2' onClick={(e) => handleSelectMenu(e, 'type')}><i className="bi bi-credit-card-2-back"></i> Card</li>
-                  <li className="list-group-item side-menu-item" value='3' onClick={(e) => handleSelectMenu(e, 'type')}><i className="bi bi-person-vcard"></i> Identity</li>
-                  <li className="list-group-item side-menu-item" value='4' onClick={(e) => handleSelectMenu(e, 'type')}><i className="bi bi-sticky"></i> Secure note</li>
+                  <li className={`list-group-item side-menu-item ${selectMenu.menuType === 'items' ? 'active-menu' : ''}`} value='' onClick={(e) => handleSelectMenu(e, 'items')}><i className="bi bi-bricks"></i> All Items</li>
+                  <li className={`list-group-item side-menu-item ${selectMenu.menuType === 'favorite' ? 'active-menu' : ''}`} value='' onClick={(e) => handleSelectMenu(e, 'favorite')}><i className="bi bi-star"></i> Favorites</li>
+                  <li className={`list-group-item side-menu-item ${selectMenu.typeValue === 1 ? 'active-menu' : ''}`} value='1' onClick={(e) => handleSelectMenu(e, 'type')}><i className="bi bi-globe"></i> Login</li>
+                  <li className={`list-group-item side-menu-item ${selectMenu.typeValue === 2 ? 'active-menu' : ''}`} value='2' onClick={(e) => handleSelectMenu(e, 'type')}><i className="bi bi-credit-card-2-back"></i> Card</li>
+                  <li className={`list-group-item side-menu-item ${selectMenu.typeValue === 3 ? 'active-menu' : ''}`} value='3' onClick={(e) => handleSelectMenu(e, 'type')}><i className="bi bi-person-vcard"></i> Identity</li>
+                  <li className={`list-group-item side-menu-item ${selectMenu.typeValue === 4 ? 'active-menu' : ''}`} value='4' onClick={(e) => handleSelectMenu(e, 'type')}><i className="bi bi-sticky"></i> Secure note</li>
               </ul>
           </div>
         </div>

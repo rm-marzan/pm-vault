@@ -10,6 +10,10 @@
 }
 
 .side-menu-item {
+  &.active-menu {
+    color: #007bff;
+    font-weight: 500;
+  }
   &:hover {
     color: #007bff;
     cursor: pointer;

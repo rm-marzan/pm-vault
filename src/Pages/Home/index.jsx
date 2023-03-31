@@ -29,15 +29,18 @@ const Home = () => {
                   <OrganizationsBar
                     loading = {loading}
                     orgData = {orgData}
+                    selectMenu = {selectMenu}
                     setSelectMenu = {setSelectMenu}
                     setOrgData = {setOrgData}
                   />
                   <ItemsBar
+                    selectMenu = {selectMenu}
                     setSelectMenu = {setSelectMenu}
                   />
                   <FoldersBar
                     loading = {loading}
                     folderData = {folderData}
+                    selectMenu = {selectMenu}
                     setSelectMenu = {setSelectMenu}
                     setFolderData = {setFolderData}
                   />

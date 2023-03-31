@@ -3,7 +3,7 @@ import { BeatLoader } from 'react-spinners';
 import AddFolderModal from '../../../Modal/FolderModals/AddFolderModal';
 import EditFolderModal from '../../../Modal/FolderModals/EditFolderModal';
 
-const FoldersBar = ({ loading, folderData, setSelectMenu, setFolderData }) => {
+const FoldersBar = ({ loading, folderData, selectMenu, setSelectMenu, setFolderData }) => {
     const [editFolderId, setEditFolderId] = useState(null);
     const [editFoldername, setEditFoldername] = useState(null);
     const [openEditModal, setOpenEditModal] = useState(false);
@@ -40,7 +40,7 @@ const FoldersBar = ({ loading, folderData, setSelectMenu, setFolderData }) => {
                                 {folderData && folderData.map((data, index) => {
                                     return(
                                         <li key={index} className="list-group-item d-flex justify-content-between align-items-center folder-list">
-                                            <div className="side-menu-item" onClick={() => handleSelectMenu(data.id)}>
+                                            <div className={`side-menu-item ${selectMenu.typeValue === data.id ? "active-menu" : ''}`} onClick={() => handleSelectMenu(data.id)}>
                                                 <i className="bi bi-folder2"></i> {data.foldername.length > 15 ? data.foldername.slice(0, 15) + ".." :data.foldername}
                                             </div>
                                             <span>

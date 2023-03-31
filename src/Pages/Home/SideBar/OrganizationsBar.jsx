@@ -3,7 +3,7 @@ import { BeatLoader } from 'react-spinners';
 import AddOrgModal from '../../../Modal/OrgModals/AddOrgModal';
 import EditOrgModal from '../../../Modal/OrgModals/EditOrgModal';
 
-const OrganizationsBar = ({ loading, orgData, setSelectMenu, setOrgData }) => {
+const OrganizationsBar = ({ loading, orgData, selectMenu, setSelectMenu, setOrgData }) => {
     const [editOrgId, setEditOrgId] = useState('');
     const [openEditModal, setOpenEditModal] = useState(false);
     const [openAddModal, setOpenAddModal] = useState(false);
@@ -29,10 +29,10 @@ const OrganizationsBar = ({ loading, orgData, setSelectMenu, setOrgData }) => {
             <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div className="accordion-body">
                     <ul className="list-group list-group-flush">
-                        <li className="list-group-item side-menu-item" onClick={() => handleSelectMenu(0, 'orgs')}>
+                        <li className={`list-group-item side-menu-item ${selectMenu.menuType === 'orgs' ? 'active-menu' : ''}`} onClick={() => handleSelectMenu(0, 'orgs')}>
                             <i className="bi bi-people-fill"></i> All Vaults
                         </li>
-                        <li className="list-group-item side-menu-item" onClick={() => handleSelectMenu(0, 'me')}>
+                        <li className={`list-group-item side-menu-item ${selectMenu.menuType === 'me' ? 'active-menu' : ''}`} onClick={() => handleSelectMenu(0, 'me')}>
                             <i className="bi bi-person-fill"></i> My Vault
                         </li>
                             {loading ? (
@@ -44,7 +44,7 @@ const OrganizationsBar = ({ loading, orgData, setSelectMenu, setOrgData }) => {
                                     {orgData && orgData.map((data, index) => {
                                         return(
                                             <li key={index} className="list-group-item d-flex justify-content-between align-items-center folder-list">
-                                                <div className="side-menu-item" onClick={() => handleSelectMenu(data.id, "org")}>
+                                                <div className={`side-menu-item ${selectMenu.typeValue === data.id ? 'active-menu' : ''}`} onClick={() => handleSelectMenu(data.id, "org")}>
                                                     <i className="bi bi-building-check"></i> {data.orgname.length > 15 ? data.orgname.slice(0, 15) + ".." :data.orgname}
                                                 </div>
                                                 <span>

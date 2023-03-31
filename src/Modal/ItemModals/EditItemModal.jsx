@@ -25,38 +25,38 @@ const EditItemModal = ({ openPopup, setOpenPopup, singleItemData, setSingleItemD
 
     const handleUpdateItem = () => {
         let myForm = new FormData();
-        myForm.append("organization_id", singleItemData.organization_id);
-        myForm.append("folder_id", singleItemData.folder_id);
-        myForm.append("name", singleItemData.name);
-        myForm.append("type", singleItemData.type);
-        myForm.append("notes", singleItemData.notes);
+        myForm.append("organization_id", singleItemData.organization_id ?? '');
+        myForm.append("folder_id", singleItemData.folder_id ?? '');
+        myForm.append("name", singleItemData.name ?? '');
+        myForm.append("type", singleItemData.type ?? '');
+        myForm.append("notes", singleItemData.notes ?? '');
         myForm.append("favorite", singleItemData.favorite ? 1 : 0);
         // Login
         if(singleItemData.type === 1){
-            myForm.append("username", singleItemData.login?.username);
-            myForm.append("password", singleItemData.login?.password);
-            myForm.append("urls", singleItemData.login?.urls);
+            myForm.append("username", singleItemData.login?.username ?? '');
+            myForm.append("password", singleItemData.login?.password ?? '');
+            myForm.append("urls", singleItemData.login?.urls ?? '');
         }
         else if(singleItemData.type === 2){
-            myForm.append("cardholder_name", singleItemData.card?.cardholder_name);
-            myForm.append("brand", singleItemData.card?.brand);
-            myForm.append("number", singleItemData.card?.number);
-            myForm.append("exp_month", singleItemData.card?.exp_month);
-            myForm.append("exp_year", singleItemData.card?.exp_year);
-            myForm.append("cvv", singleItemData.card?.cvv);
+            myForm.append("cardholder_name", singleItemData.card?.cardholder_name ?? '');
+            myForm.append("brand", singleItemData.card?.brand ?? '');
+            myForm.append("number", singleItemData.card?.number ?? '');
+            myForm.append("exp_month", singleItemData.card?.exp_month ?? '');
+            myForm.append("exp_year", singleItemData.card?.exp_year ?? '');
+            myForm.append("cvv", singleItemData.card?.cvv ?? '');
         }
         // Identify
         else if(singleItemData.type === 3){
-            myForm.append("title", singleItemData.identity?.title);
-            myForm.append("username", singleItemData.identity?.username);
-            myForm.append("first_name", singleItemData.identity?.first_name);
-            myForm.append("middle_name", singleItemData.identity?.middle_name);
-            myForm.append("last_name", singleItemData.identity?.last_name);
-            myForm.append("address", singleItemData.identity?.address);
-            myForm.append("phone", singleItemData.identity?.phone);
-            myForm.append("email", singleItemData.identity?.email);
-            myForm.append("security_number", singleItemData.identity?.security_number);
-            myForm.append("license_number", singleItemData.identity?.license_number);
+            myForm.append("title", singleItemData.identity?.title ?? '');
+            myForm.append("username", singleItemData.identity?.username ?? '');
+            myForm.append("first_name", singleItemData.identity?.first_name ?? '');
+            myForm.append("middle_name", singleItemData.identity?.middle_name ?? '');
+            myForm.append("last_name", singleItemData.identity?.last_name ?? '');
+            myForm.append("address", singleItemData.identity?.address ?? '');
+            myForm.append("phone", singleItemData.identity?.phone ?? '');
+            myForm.append("email", singleItemData.identity?.email ?? '');
+            myForm.append("security_number", singleItemData.identity?.security_number ?? '');
+            myForm.append("license_number", singleItemData.identity?.license_number ?? '');
         }
         updateItem(itemId, myForm, setOpenPopup, setItemsData);
     }
